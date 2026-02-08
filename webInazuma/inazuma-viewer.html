@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inazuma Pro Builder - Drag & Drop</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="openTab('tiers')">
+          Fichajes
+        </button>
+        <button class="tab-btn" onclick="openTab('builder')">
+          Equipo (<span id="team-count">0</span>/16)
+        </button>
+      </div>
+
+      <div id="tiers" class="tab-content active">
+        <div class="controls">
+          <input
+            type="text"
+            id="search"
+            class="search-box"
+            placeholder="Buscar por nombre..."
+          />
+
+          <span class="label">Sumar para Tiers:</span>
+          <div class="button-group" id="stat-btns">
+            <button class="btn btn-stat active" data-stat="Kick_Lv50_0">
+              Tiro
+            </button>
+            <button class="btn btn-stat" data-stat="Control_Lv50_0">
+              Control
+            </button>
+            <button class="btn btn-stat" data-stat="Intelligence_Lv50_0">
+              Int
+            </button>
+            <button class="btn btn-stat" data-stat="Technique_Lv50_0">
+              Téc
+            </button>
+            <button class="btn btn-stat" data-stat="Pressure_Lv50_0">
+              Pre
+            </button>
+            <button class="btn btn-stat" data-stat="Physical_Lv50_0">
+              Fís
+            </button>
+            <button class="btn btn-stat" data-stat="Agility_Lv50_0">Agi</button>
+          </div>
+
+          <div style="display: flex; gap: 20px; flex-wrap: wrap">
+            <div>
+              <span class="label">Posición:</span>
+              <div class="button-group">
+                <button class="btn btn-pos active" data-val="ALL">Todos</button>
+                <button class="btn btn-pos" data-val="GK">GK</button>
+                <button class="btn btn-pos" data-val="DF">DF</button>
+                <button class="btn btn-pos" data-val="MF">MF</button>
+                <button class="btn btn-pos" data-val="FW">FW</button>
+              </div>
+            </div>
+            <div>
+              <span class="label">Elemento:</span>
+              <div class="button-group">
+                <button class="btn btn-elem active" data-val="ALL">
+                  Todos
+                </button>
+                <button class="btn btn-elem" data-val="Fire">Fuego</button>
+                <button class="btn btn-elem" data-val="Wind">Aire</button>
+                <button class="btn btn-elem" data-val="Forest">Bosque</button>
+                <button class="btn btn-elem" data-val="Mountain">
+                  Montaña
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tierContainer"></div>
+      </div>
+
+      <div id="builder" class="tab-content">
+        <div class="controls" style="text-align: center">
+          <p style="font-size: 0.8rem; margin: 0 0 10px 0">
+            ¡Arrastra los iconos para mover a los jugadores libremente!
+          </p>
+          <button
+            class="btn"
+            onclick="clearTeam()"
+            style="background: #ff4136; color: white"
+          >
+            Resetear Equipo
+          </button>
+        </div>
+        <div class="field-container" id="field"></div>
+        <div
+          id="bench"
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background: #ccc;
+            margin-top: 10px;
+            border-radius: 10px;
+            min-height: 60px;
+          "
+        ></div>
+      </div>
+    </div>
+    <footer style="font-size: 0.8rem; text-align: center; color: gray">
+      <p>Inazuma Eleven y sus personajes son propiedad de LEVEL-5 Inc.</p>
+      <p>
+        Las imágenes se utilizan con fines informativos y provienen de la web de
+        Inazugle.
+      </p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
