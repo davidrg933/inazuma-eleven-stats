@@ -32,4 +32,4 @@ Este es un proyecto sin fines de lucro realizado por un fan.
 * Las imágenes se utilizan bajo el concepto de *Fair Use* con fines informativos y de entretenimiento.
 
 ---
-💌 **¿Quieres contactar conmigo?** Puedes encontrarme en  o enviarme un mensaje a través de GitHub.
+💌 **¿Quieres contactar conmigo?** Puedes encontrarme en  https://www.linkedin.com/in/davidrodriguezgonzalez933/ o enviarme un mensaje a través de GitHub.
