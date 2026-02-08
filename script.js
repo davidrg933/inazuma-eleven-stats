@@ -89,7 +89,7 @@ function renderTiers() {
                             <div class="player-name">${p.name_0}</div>
                             <table class="stats-table">
                                 ${statRow("Tir", p.Kick_Lv50_0, "Kick_Lv50_0")}
-                                ${statRow("Con", p.Kick_Lv50_0, "Control_Lv50_0")}
+                                ${statRow("Con", p.Control_Lv50_0, "Control_Lv50_0")}
                                 ${statRow("Int", p.Intelligence_Lv50_0, "Intelligence_Lv50_0")}
                                 ${statRow("Téc", p.Technique_Lv50_0, "Technique_Lv50_0")}
                                 ${statRow("Pre", p.Pressure_Lv50_0, "Pressure_Lv50_0")}
